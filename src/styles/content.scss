@@ -1,0 +1,110 @@
+@import "settings"; 
+@import "mixin";
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    font-family: $font-n;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: normal;
+    color: $body-color;
+}
+
+a {
+    color: $link;
+    @include transition(0.5s);
+    &:hover, &:active, &:focus {
+        color: $sec-color;
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $title;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: $font-o;
+}
+
+#root {
+    background: white;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: $screen-sm) {
+        max-width: 634px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: $screen-xs) {
+        max-width: 634px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+#main {
+    .text {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .intro {
+        padding: 30px 0 20px;
+        .title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: $title;
+            line-height: 24px;
+            font-weight: bold;
+            font-family: $font-o;
+        }
+    }
+    .cta_block {
+        padding: 20px 0 30px;
+        .text {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .cta {
+            text-align: center;
+            .btn {
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+                text-transform: capitalize;
+                box-shadow: none;
+                height: auto;
+                span {
+                    display: inline-block;
+                    min-width: 219px;
+                }
+            }
+        }
+    }
+}

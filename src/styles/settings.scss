@@ -1,0 +1,52 @@
+// 參數
+$font-o: 'Open Sans', sans-serif;
+$font-n: 'Noto Sans', sans-serif;
+$lh-11: 1.1;
+$lh-14: 1.4;
+$lh-15: 1.5;
+$lh-17: 1.7;
+$lh-19: 1.9;
+$fw-5: 400;
+$fw-6: 700;
+$fs-75: 0.75rem;
+$fs-85: 0.85rem;
+$fs-9: 0.9rem;
+$fs-95: 0.95rem;
+$fs-1: 1rem;
+// colors
+$main-color: #104935;
+$sec-color: #c39e37;
+$body-color: #4a4a4a;
+$title: #222b45;
+$black: #192038;
+$blue: #e4e9f2;
+$g-blue: #c5cee0;
+$l-blue: #f7f9fc;
+$link: #0091ff;
+$l-gray: #8F9BB3;
+$white: #fff;
+$form-span: #646a7a;
+$red: #ff3d71;
+// $gray: #8b7e8c;
+// $lighter: #d4bd94;
+$alpha-3: 0.3;
+$alpha-5: 0.5;
+$alpha-8: 0.8;
+//screen
+$screen-xs: 576px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1200px !default;
+$screen-xs-max: ($screen-xs - 1) !default;
+$screen-sm-max: ($screen-sm - 1) !default;
+$screen-md-max: ($screen-md - 1) !default;
+$screen-lg-max: ($screen-md - 1) !default;
+//styles
+$br-4: 4px !default;
+$pm-xxs: 0.25rem;
+$pm-xs: 0.5rem;
+$pm-sm: 0.75rem;
+$pm-md: 1rem;
+$pm-lg: 1.25rem;
+$br-4: 4px !default;
+$pd-main: 0.5rem !default;

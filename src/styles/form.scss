@@ -1,0 +1,205 @@
+@import "settings";
+@import "mixin";
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $l-gray !important;
+    font-size: 14px;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $l-gray;
+    font-size: 14px;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $l-gray;
+    font-size: 14px;
+}
+
+.btn {
+    min-width: 110px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: $font-o;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    @include border-radius(4px);
+    @include transition(all 0.5s ease-in-out);
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+    &.btn-primary {
+        background-color: $main-color;
+        color: white !important;
+        &:hover, &:active {
+            color: $sec-color !important;
+            background-color: lighten($main-color, 10%) !important;
+        }
+    }
+}
+
+.intro {
+    padding: 30px 0 20px;
+    .title {
+        margin-bottom: 0;
+        font-size: 18px;
+        color: $title;
+        line-height: 24px;
+        font-weight: bold;
+        font-family: $font-o;
+    }
+}
+    
+.text {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+form#registration_form {
+    .input-field {
+        margin: 0 0 10px 0;
+        h5 {
+                position: relative;
+                margin-bottom: 0;
+                color: $title;
+                font-size: 16px;
+                font-family: $font-o;
+                font-weight: 600;
+                letter-spacing: normal;
+        }
+        input {
+                font-size: 14px;
+                height: 1.53rem;
+                margin: 0;
+        }
+        .textarea {
+                width: 100% !important;
+                //@extend: 96px;
+                margin-bottom: 0;
+                padding: 0;
+                font-size: 14px;
+                resize: none;
+                //border: none;
+                outline: none;
+                line-height: normal;
+                letter-spacing: normal;
+                .MuiInputBase-root {
+                    width: 100% !important;
+                }
+        }
+        input, textarea {
+                color: $title;
+                &.valid, &.invalid, &:active, &:focus {
+                    border: none;
+                }
+        }
+        .text-danger {
+                padding-top: 2px;
+                color: $red;
+        }
+        .MuiFormHelperText-root {
+                margin-bottom: 10px;
+                color: $form-span;
+                font-family: $font-o;
+                font-size: 10px;
+                line-height: 1.5;
+                letter-spacing: 0.01rem;
+                &.MuiFormHelperText-contained {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+        }
+        .MuiInput-underline {
+                &:before {
+                    border-color: $g-blue;
+                }
+                &:after {
+                    border-color: $main-color;
+                }
+        }
+        .MuiFormControl-root {
+                // width: 100%;
+                .MuiOutlinedInput-input {
+                    font-size: 15px;
+                    color: $title;
+                    font-weight: 600;
+                    padding: 13px 16px;
+                    @include border-radius(4px);
+                    border: 1px solid $g-blue;
+                    background-color: $l-blue;
+                    box-sizing: border-box;
+                }
+                .MuiSelect-icon {
+                    top: auto;
+                    right: 16px;
+                }
+        }
+        &.required {
+                h5:after {
+                    content: "*";
+                    color: $red;
+                }
+        }
+        @media (min-width: $screen-sm) {
+            .MuiInputBase-root {
+                width: 350px;
+            }
+        }
+            // @media (max-width: $screen-sm-max) {
+            //     .MuiInput-underline {
+            //         width: 100%;
+            //     }
+            // }
+    }
+    .info {
+            padding: 15px;
+            margin-top: 20px;
+            border: dashed 1px $main-color;
+            color: $black;
+            h6 {
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 0;
+                color: #000000;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 300;
+                margin: 0;
+            }
+    }
+    .cta_block {
+            padding: 10px 0 30px;
+            .text {
+                margin-top: 0;
+                margin-bottom: 20px;
+                color: $title;
+            }
+            .cta {
+                text-align: center;
+                .btn {
+                    position: relative;
+                    display: inline-block;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    box-shadow: none;
+                    height: auto;
+                    span {
+                        display: inline-block;
+                        min-width: 219px;
+                    }
+                }
+            }
+    }
+}
